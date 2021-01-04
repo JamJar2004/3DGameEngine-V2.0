@@ -1,0 +1,36 @@
+vec2 calcWaterDistortion(sampler2D distortionMap, vec2 oldTexCoord, float tilingFactor, float waveStrength, float moveFactor)
+{
+    vec2 finalTexCoord = oldTexCoord * tilingFactor;
+    vec4 dudvColor = texture2D(distortionMap, vec2(finalTexCoord.x + moveFactor, finalTexCoord.y));
+
+    if(distortionMap_EXISTS == 0)
+        dudvColor = vec4(0.5, 0.5, 0.5, 1.0);
+
+    vec2 distortedTexCoords = dudvColor.rg * 0.1;
+    distortedTexCoords = finalTexCoord + vec2(distortedTexCoords.x, distortedTexCoords.y + moveFactor);
+    vec4 dudvColor2 = texture2D(distortionMap, distortedTexCoords);
+    vec2 totalDistortion = (dudvColor2.rg * 2.0 - 1.0) * waveStrength;
+
+    return totalDistortion;
+}
+
+vec3 calcWaterNormals(sampler2D normalMap, int normalMap_EXISTS, vec2 distortedTexCoords)
+{
+    vec4 normalMapColor = texture(normalMap, distortedTexCoords);
+
+    if(normalMap_EXISTS == 0)
+        normalMapColor = vec4(0.5, 0.5, 1.0, 1.0);
+
+    vec3 normal = vec3(normalMapColor.r * 2.0 - 1.0, normalMapColor.b, normalMapColor.g * 2.0 - 1.0);
+    return normalize(normal);
+}
+
+float calcWaterDepth(sampler2D depthMap, int depthMap_EXISTS, vec2 texCoord, float zNear, float zFar, float zFragCoord)
+{
+    float depth = texture(depthMap, texCoord).r;
+    float floorDistance = 2.0 * zNear * zFar / (zFar + zNear - (2.0 * depth - 1.0) * (zFar - zNear));
+
+    depth = zFragCoord;
+    float waterDistance = 2.0 * zNear * zFar / (zFar + zNear - (2.0 * depth - 1.0) * (zFar - zNear));
+    return floorDistance - waterDistance;
+}

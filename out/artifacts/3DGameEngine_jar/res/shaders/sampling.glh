@@ -1,0 +1,77 @@
+uniform vec3      color;
+
+uniform sampler2D texture;
+uniform int texture_EXISTS;
+
+uniform sampler2D redTexture;
+uniform int redTexture_EXISTS;
+
+uniform sampler2D greenTexture;
+uniform int greenTexture_EXISTS;
+
+uniform sampler2D blueTexture;
+uniform int blueTexture_EXISTS;
+
+uniform sampler2D blendMap;
+uniform int blendMap_EXISTS;
+
+vec4 calcColor(vec2 texCoord)
+{
+    vec4 result;
+
+    if(texture_EXISTS == 0)
+        result = vec4(color, 1.0);
+    else
+        result = texture2D(texture, texCoord) * vec4(color, 1.0);
+
+    return result;
+}
+
+vec4 calcColorWithBlendMap(vec2 texCoord, float tilingFactor)
+{
+    vec4 blendMapColor;
+
+    vec4 texColor;
+    vec4 redTexColor;
+    vec4 greenTexColor;
+    vec4 blueTexColor;
+
+    if(texture_EXISTS == 0)
+        texColor = vec4(color, 1);
+    else
+        texColor = texture2D(texture, texCoord * tilingFactor) * vec4(color, 1);
+
+    if(redTexture_EXISTS == 0)
+        redTexColor = vec4(color, 1);
+    else
+        redTexColor = texture2D(redTexture, texCoord * tilingFactor) * vec4(color, 1);
+
+    if(greenTexture_EXISTS == 0)
+        greenTexColor = vec4(color, 1);
+    else
+        greenTexColor = texture2D(greenTexture, texCoord * tilingFactor) * vec4(color, 1);
+
+    if(blueTexture_EXISTS == 0)
+        blueTexColor = vec4(color, 1);
+    else
+        blueTexColor = texture2D(blueTexture, texCoord * tilingFactor) * vec4(color, 1);
+
+    if(blendMap_EXISTS == 0)
+        blendMapColor = vec4(0, 0, 0, 1);
+    else
+        blendMapColor = texture2D(blendMap, texCoord);
+
+    float texFactor = 1 - (blendMapColor.r + blendMapColor.g + blendMapColor.b);
+
+    vec4 totalTexColour = (texColor * texFactor) + (redTexColor * blendMapColor.r) + (greenTexColor * blendMapColor.g) + (blueTexColor * blendMapColor.b);
+
+    return totalTexColour;
+}
+
+bool textureHasTransparency(vec2 texCoord)
+{
+    return texture2D(texture, texCoord).a < 0.5;
+}
+
+
+
