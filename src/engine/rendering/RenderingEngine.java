@@ -67,10 +67,9 @@ public class RenderingEngine
             }
         }
 
-        for(Integer index : transparentEntities.keySet())
+        for(Entity entity : transparentEntities.values())
         {
-            Entity entity =  transparentEntities.get(index);
-            if (entity.hasRenderer() && !entity.getIsHidden())
+            if(entity.hasRenderer() && !entity.getIsHidden())
             {
                 entity.getRenderer().setRenderingEngine(this);
                 entity.getRenderer().render(camera);

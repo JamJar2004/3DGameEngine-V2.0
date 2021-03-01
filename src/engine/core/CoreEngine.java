@@ -20,9 +20,9 @@ public class CoreEngine
         this.frameTime       = 1.0 / frameCap;
     }
 
-    public void createWindow(int width, int height, String title)
+    public void createWindow(int width, int height, String title, boolean fullScreen)
     {
-        Window.create(width, height, title);
+        Window.create(width, height, title, fullScreen);
         this.renderingEngine = new RenderingEngine();
         this.audioEngine     = new AudioEngine();
         this.game.setCamera(new Camera());

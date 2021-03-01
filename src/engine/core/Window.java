@@ -9,17 +9,28 @@ import org.lwjgl.opengl.DisplayMode;
 
 public class Window
 {
-    public static void create(int width, int height, String title)
+    public static void create(int width, int height, String title, boolean fullScreen)
     {
         Display.setTitle(title);
         try
         {
-            Display.setDisplayMode(new DisplayMode(width, height));
+            for(DisplayMode mode : Display.getAvailableDisplayModes())
+            {
+                if(mode.getWidth() == width && mode.getHeight() == height)
+                {
+                    if(fullScreen && !mode.isFullscreenCapable())
+                        continue;
+
+                    Display.setDisplayMode(mode);
+                    Display.setFullscreen(fullScreen);
+                }
+            }
+
             Display.create();
             Keyboard.create();
             Mouse.create();
         }
-        catch (LWJGLException e)
+        catch(LWJGLException e)
         {
             e.printStackTrace();
         }

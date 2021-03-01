@@ -1,14 +1,16 @@
 package games;
 
 import engine.core.CoreEngine;
+import games.Wolfenstein3D.*;
 import games.wing_ring.*;
 
 public class Main
 {
     public static void main(String[] args)
     {
-        CoreEngine engine = new CoreEngine(new WingRing(), 60);
-        engine.createWindow(1024, 768, "3D Game Engine");
+        CoreEngine engine = new CoreEngine(new TutorialGame(), 60);
+        //engine.createWindow(1920, 1080, "3D Game Engine", true);
+        engine.createWindow(800, 600, "3D Game Engine", false);
         engine.start();
     }
 }

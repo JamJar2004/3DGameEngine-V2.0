@@ -33,6 +33,12 @@ public class WingRing extends Game
         sand.addComponent(follow);
         addEntity(sand);
 
+        //I added water in Wing Ring!
+        Water water = new Water(new Texture("dudv.png"), new Texture("normalMap.png"));
+        water.getTransformation().setPosition(0, -15f, 0);
+        water.getTransformation().setScale(10000f);
+        addEntity(water);
+
         Sprite rings = new Sprite("wing_ring/ring.bmp");
         rings.getTransformation().turn(Vector3f.RIGHT, 90f);
         rings.getTransformation().setPosition(0, sand.getTransformation().getPosition().getY() + 0.1f, 0);
@@ -126,7 +132,7 @@ public class WingRing extends Game
         source.setPitch(1f);
         source.setLooping(true);
         source.setSound(music);
-        source.play();
+        //source.play();
     }
 
     @Override
