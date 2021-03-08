@@ -1,3 +1,9 @@
+/*
+ * This class has been brought from ThinMatrix's OpenAL tutorial.
+ * I only modified the class to use chosen values instead of constants
+ * Link: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbl9lY3lHSjhMRUdmSW5QcWRCRVRrVXl1UFZIQXxBQ3Jtc0ttdU1OakNWS1IyWmlXRERXREpNTmY1UFhLS0JCZEdaSjFzNUl4OXcwTVhIb0FXVFRVUWhtZlUzNUV5TVdSX3ktZ1o4Si1NdUZKeUYxc2lBT1kzalFaakR0NWMwNVFMeGtqRkpaMjEzbUVaRENLaE1SOA&q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fhkbfk2z1qngsg2y%2FWaveData.java%3Fdl%3D0
+ */
+
 package engine.rendering;
 
 import engine.core.Window;

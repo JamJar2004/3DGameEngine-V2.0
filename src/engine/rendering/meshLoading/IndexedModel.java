@@ -3,8 +3,6 @@ package engine.rendering.meshLoading;
 
 import engine.core.math.*;
 
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class IndexedModel

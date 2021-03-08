@@ -7,24 +7,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d7cfc53-3523-4c9e-be21-8df6d15f57da" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/games/TutorialGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3DGameEngine/META-INF/3DGameEngine.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3DGameEngine/engine/core/CoreEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/3DGameEngine/engine/core/CoreEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3DGameEngine/engine/core/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/3DGameEngine/engine/core/Window.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3DGameEngine/engine/rendering/RenderingEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/3DGameEngine/engine/rendering/RenderingEngine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3DGameEngine/games/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/3DGameEngine/games/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3DGameEngine/games/TestGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/3DGameEngine/games/TestGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/3DGameEngine/games/wing_ring/WingRing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/3DGameEngine/games/wing_ring/WingRing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/core/CoreEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/core/CoreEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/core/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/core/Window.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/engine/rendering/RenderingEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/rendering/RenderingEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/audio/WaveData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/audio/WaveData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/core/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/core/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/core/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/core/Time.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/core/math/Matrix4f.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/core/math/Matrix4f.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/core/math/Quaternion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/core/math/Quaternion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/core/math/Transformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/core/math/Transformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/rendering/Shader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/rendering/Shader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/rendering/WaterFrameBuffers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/rendering/WaterFrameBuffers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/rendering/meshLoading/IndexedModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/rendering/meshLoading/IndexedModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/rendering/meshLoading/OBJModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/engine/rendering/meshLoading/OBJModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/games/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/TestGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/TestGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/wing_ring/WingRing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/wing_ring/WingRing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/WashingMachine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/Wolfenstein3D/Wolf3D notes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/entities/lights/PointLight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/entities/lights/PointLight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sounds/benny spooky.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sounds/testClip.wav" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +41,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1Z5Wm4GY9GcHSFJ7rudHaxFaTDx" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,7 +62,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.1725" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">

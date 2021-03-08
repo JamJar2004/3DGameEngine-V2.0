@@ -16,6 +16,7 @@ public class PointLight extends BaseLight
         setLightName("point");
         this.attenuation = attenuation;
 
+        //I got this calculation from thebennybox's 3D Game Engine tutorial series.
         float a = attenuation.getExponent();
         float b = attenuation.getLinear();
         float c = attenuation.getConstant() - COLOR_DEPTH * getIntensity() * getColor().maxValue();

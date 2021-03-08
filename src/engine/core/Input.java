@@ -1,5 +1,3 @@
-package engine.core;
-
 /*
  * Copyright (C) 2014 Benny Bobaganoosh
  *
@@ -15,6 +13,13 @@ package engine.core;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/*
+ * This code has been brought from thebennybox 3D Game Engine tutorial series.
+ * The getMouseMove() method has been added by myself and the naming conventions have been changed as well.
+ */
+
+package engine.core;
 
 import engine.core.math.Vector2f;
 import org.lwjgl.input.Keyboard;
